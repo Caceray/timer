@@ -19,11 +19,14 @@ Timer::~Timer()
         this->m_stack.pop();
     }
     
-    cout << "Timer [" << this->m_name << "] recap :" << endl;
-    while(!this->m_roots.empty())
+    if(!this->m_roots.empty())
     {
-        delete this->m_roots.front();
-        this->m_roots.pop();
+        cout << "Timer [" << this->m_name << "] recap :" << endl;
+        while(!this->m_roots.empty())
+        {
+            delete this->m_roots.front();
+            this->m_roots.pop();
+        }
     }
 }
 
