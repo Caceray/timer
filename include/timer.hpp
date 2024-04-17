@@ -1,7 +1,6 @@
 #ifndef timer_hpp
 #define timer_hpp
 
-#include <map>
 #include <queue>
 #include <stack>
 #include <string>
@@ -23,7 +22,7 @@ private:
     std::string m_name;
     std::queue<Task*> m_roots;
     std::stack<std::string> m_stack;
-    std::map<std::string, Task*> m_tasks;
+    std::unordered_map<std::string, Task*> m_tasks;
 };
 
 #endif /* timer_hpp */
